@@ -6,22 +6,19 @@
     <title>Test</title>
 </head>
 <body>
-    <script language="cxx">
-        #include <iostream>
+    <wasm-script>
+        #include "iostream"
 
         int func() {
             std::cout << "C++ was called" << std::endl;
             return 2;
         }
-
-        // class Man {
-
-        // };
-    </script>
-    <script src="public/compiler.js"></script>
+    </wasm-script>
+    <script src="../public/compiler.js"></script>
     <script src="_ret.js"></script>
     <script>
         // console.log(func())
     </script>
+    <script src="../public/wasm-script.js"></script>
 </body>
 </html>
