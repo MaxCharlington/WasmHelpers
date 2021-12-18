@@ -21,6 +21,6 @@ else if (cxxScripts > 1)
 // publish recieved code
 var Module = {
     onRuntimeInitialized: function() {
-        console.log(Module.func(123.123))
+        console.log(Module.getMantissa(0.2))
     }
 };
