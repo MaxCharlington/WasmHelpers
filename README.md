@@ -1,10 +1,22 @@
-# CxxTag
-C++ is performant and powerful language. Bringing it's capabilities to the web platform will make it a greate place to code for.
-For now we can only have C++ compiled in the build step of the app. It is not as flexible and does not really fit dinamic nature
-of web applications.
-The aim of the project is to achieve ease of use of C++ with web platform.
+# Wasm helpers
 
-## What I want to achive
+[Documentation in English](README_en.md)
+
+JavaScript - единственный язык, который можно запустить в браузере. WebAssembly не может ничего противопоставить,
+так как его крайне сложно писать вручную. Есть множество компилируемых, производительных и мощных
+язык, которые могут выполняться в веб-браузере через WebAssembly.
+Если использовать их в браузере, это во многом улучшит платформу и расширит ее возможности.
+На данный момент мы можем скомпилировать их только на этапе сборки приложения. Это не так гибко и не
+соответствует динамчности веб-приложений.
+Цель проекта - добиться простоты использования этих языков с веб-платформой путем создания инструментов
+для их интеграции.
+
+
+## Вариант 1. Использование тэга script
+
+Использование ненативного языка непосредственно в тэге script.
+Желаемый код, использующий этот подход:
+
 ```html
 <!DOCTYPE html>
 <html>
