@@ -3,12 +3,22 @@ class WasmScript extends HTMLElement {
         super();
         this.style.display = 'none'
     }
-    connectedCallback() {
+    async connectedCallback() {
         const sourceCode = this.innerText
-        const initWasmScript = fetch('https://api.github.com/gists', {
-            method: 'post',
-            body: JSON.stringify(opts)
-        }
+        const res = await fetch('http://localhost:3000/compile', {
+            method: 'PUT',
+            body: sourceCode
+        })
+        let s = document.createElement("script")
+        s.type = "text/javascript"
+        s.src = await res.text()
+        document.body.appendChild(s);
+    }
+}
+
+var Module = {
+    onRuntimeInitialized: function() {
+        console.log(Module.getMantissa(0.2))
     }
 }
 
