@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <wasm-script>
+        #include "string"
+        #include "cstdio"
+
+        double func(double a) {
+            printf("%f\n", a);
+            return a + 12;
+        }
+
+        std::string func2() {
+            return "";
+        }
+
+        union float_cast{
+            float f;
+            struct {
+                unsigned int mantisa : 23;
+                unsigned int exponent : 8;
+                unsigned int sign : 1;
+            } parts;
+        };
+
+        unsigned getMantissa(float num) {
+            float_cast d1 = { .f = num };
+            return d1.parts.mantisa;
+        }
+    </wasm-script>
+    <script src="wasm-script.js"></script>
+</body>
+</html>
