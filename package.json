@@ -1,9 +1,10 @@
 {
-  "name": "CxxTag",
+  "name": "WASM_Helpers",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "compile": "scripts/build.sh"
   },
   "author": "MaxCharlington",
   "license": "ISC",

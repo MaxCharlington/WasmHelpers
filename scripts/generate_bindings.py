@@ -1,10 +1,10 @@
 import sys
 import clang.cindex
-from devana.syntax_abstraction.typeexpression import BasicType, TypeModification
-from devana.syntax_abstraction.functioninfo import FunctionInfo, FunctionModification
-from devana.syntax_abstraction.organizers.sourcefile import SourceFile
-from devana.utility.errors import CodeError
-from devana.syntax_abstraction.organizers.lexicon import Lexicon
+# from devana.syntax_abstraction.typeexpression import BasicType, TypeModification
+# from devana.syntax_abstraction.functioninfo import FunctionInfo, FunctionModification
+# from devana.syntax_abstraction.organizers.sourcefile import SourceFile
+# from devana.utility.errors import CodeError
+# from devana.syntax_abstraction.organizers.lexicon import Lexicon
 
 # EMSCRIPTEN_BINDINGS(my_module) {
 #     function("lerp", &lerp);
